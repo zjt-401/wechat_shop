@@ -1,0 +1,40 @@
+<wxs src="../../../public/publicFun.wxs" module="publicFun"></wxs>
+<view class='container' wx:if="{{!loading}}">
+<!--  style='padding-bottom:{{publishState&&customFormId?"100rpx":"0"}}' -->
+  <!-- 选择tab -->
+  <view class='zhezhao' wx:if="{{showCount}}" bindtap='closeZhezhao'></view>
+  <view class='select_top' wx:if="{{showTop}}" style='position:{{componentState?"":"fixed"}}'>
+    <view class='switch_tab'>
+      <scroll-view scroll-x class="tab-h" scroll-into-view="{{'tab_'+positionTab}}" scroll-with-animation='true'>
+        <view  wx:for="{{formType}}" wx:for-item="type" wx:key="{{index}}" data-type="{{type}}" bindtap='bindTypeItem' id="{{'tab_'+type.id}}" class='tab-item' style='color:{{type.colorAtive}};border-bottom:{{type.active?"2rpx solid "+type.colorAtive:""}};'>{{type.formName}}</view>
+       </scroll-view>
+    </view>
+    <view class='select_tab' wx:if="{{selectTab.length!=0}}">
+      <view class='select_tab_item' wx:for="{{selectTab}}" wx:for-item="selectTabItem" wx:key='{{index}}' catchtap='selectTab' data-index="{{index}}">
+        <text class='select_tab_item_text' style="color:{{selectTabIndex==index?setting.platformSetting.defaultColor:''}}">{{selectResultsObj[selectTabItem.name]?selectResultsObj[selectTabItem.name]:selectTabItem.title}}</text>
+        <image class='select_tab_item_icon' wx:if="{{!selectTabItem.state}}" src='http://image1.sansancloud.com/jianzhan/2019_3/20/12/1/52_354.jpg?x-oss-process=style/preview_120'></image>
+        <image class='select_tab_item_icon' wx:else src='http://image1.sansancloud.com/jianzhan/2019_3/20/12/1/52_336.jpg?x-oss-process=style/preview_120'></image>
+      </view>
+      <scroll-view scroll-y class='select_tab_item_value' wx:if="{{showCount}}">
+        <text class='select_tab_item_value_name' data-index="-1" catchtap='selectResult'>不限</text>
+        <text class='select_tab_item_value_name' data-index="{{index}}" catchtap='selectResult' wx:for="{{selectTab[selectTabIndex].listValues}}" wx:for-item="selectTabItemValues">{{selectTabItemValues}}</text>
+      </scroll-view>
+    </view>
+  </view>
+  <view style='{{!showTop||componentState?"margin-top:":""}}{{!showTop||componentState?"0px":""}}' class='{{selectTab.length!=0?"form_commit_list mt_150":"form_commit_list mt_80"}}'>
+    <block wx:if="{{formCommitList.length!=0}}">
+      <!-- 表单子项样式组件 -->
+      <block>
+        <form-item wx:if='{{formCommitList&&formListStyle}}' wx:for="{{formCommitList}}" wx:for-item="formCommitItem" wx:if="{{limitState!=0?index<data.jsonData.count:'ture'}}" wx:key='{{index}}' id="formItem" style="width:100%" controlLimitState="{{controlLimitState}}" formListStyle="{{formListStyle}}" data="{{formCommitItem}}" ></form-item>
+      </block> 
+    </block>
+    <block wx:else>
+       <view class='none_list'>主人~暂无提交表单哦！</view>
+    </block>
+    <view wx:if="{{publishState&&customFormId&&!componentState}}" style='height:100rpx;width:100%;background:#fff'></view>
+  </view>
+</view>
+<view class='publish_message_btn' catchtap='tolinkUrl' data-link="form_detail.html?customFormId={{customFormId}}" style='background:{{setting.platformSetting.defaultColor}}' wx:if="{{publishState&&customFormId&&!componentState}}">
+  <image class='publish_message_icon' src='http://image1.sansancloud.com/xianhua/2019_3/20/10/45/42_450.jpg?x-oss-process=style/preview_120'></image>
+  <text class='publish_message_text'>发布信息</text>
+</view>

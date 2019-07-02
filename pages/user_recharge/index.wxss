@@ -1,0 +1,58 @@
+/* pages/my_pages/user_recharge/index.wxss */
+.chongzhijine{
+  margin: 1em 0;
+  padding:10px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1rpx solid #aaa;
+}
+.chongzhijine text{
+  
+  padding:0px 10px;
+  
+}
+.chongzhijine input{
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding:10px 10px;
+}
+
+.way{
+  display: flex;
+  flex-direction: column;
+}
+
+/* 支付方式 */
+.payName{
+  padding: 10px;
+  display: flex;
+  background: #f2f2f2;
+  color: #aaa;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #dddddd;
+}
+.payWay{
+  padding: 15px 10px;
+  display: flex;
+  background: #fff;
+  color: #333;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #dddddd;
+  
+}
+.payWay text{
+  margin-left: 3em;
+}
+
+.subMitButn{
+  background: #8B572A;
+  color: #fff;
+  margin:30rpx 20rpx;
+}

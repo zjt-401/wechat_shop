@@ -1,0 +1,10 @@
+{
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "#000000",
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "首页",
+
+    "usingComponents": {
+      "component-tag-customPage": "../../view/partials/custom_page/index"
+    }
+}

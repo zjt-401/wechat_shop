@@ -1,0 +1,98 @@
+/* pages/my_pages/my_coupons/index.wxss */
+/* 头部 */
+.active{
+  border-bottom: 2px solid #8B572A;
+}
+.tocoupons_get{
+  text-align: right;
+  font-size: small;
+  padding: 10px;
+  color: #8B572A;
+  border-bottom: 1px solid #dddddd;
+}
+.tab{
+  display: flex;
+  flex-direction: row;
+}
+.tab view{
+  width: 33.33%;
+  height: 3em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: small;
+  color: #454545;
+}
+/* item */
+.couponListContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.couponListItem{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+}
+.itemHead{
+  padding: 10px;
+  background: #8B572A;
+  color: #fff;
+  text-align: left;
+  
+}
+.itemBottom{
+  padding: 10px;
+  text-align: right;
+  font-size: x-small;
+}
+.itemBody{
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+.itemBody > text{
+  font-size: xx-large;
+  color: #8B572A
+}
+.itemBody > view{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  color: #fff;
+}
+.itemBody .ccc{
+  color: #333;
+}
+
+.hadGet{
+  background: #ccc;
+  color: fff;
+  padding: 5px;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+.notGet{
+  background: #8B572A;
+  color: fff;
+  padding: 5px;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+.noList{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  color: #ddd;
+  height:1000rpx;
+}

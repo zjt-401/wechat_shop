@@ -1,0 +1,31 @@
+<view class='container'>
+   
+    <view class='couponListContainer' wx:if="{{showCoupon&&showCoupon.length!=0}}">
+    <!-- bindtap='toCouponDetail' -->
+      <view class='couponListItem' wx:for='{{showCoupon}}' wx:for-item='cou' wx:key='{{cou.id}}'  data-id='{{cou.id}}'>
+          <view class='itemHead' style='background:{{setting.platformSetting.defaultColor}}'>{{cou.name}}</view>
+          <view class='itemBody'>
+            <text>￥{{cou.youhuiAmount}}</text>
+            <view>
+              <view class='ccc'>满{{cou.orderAmount}}可用</view>
+              
+              <block wx:if='{{cou.gotCount==cou.count&&!cou.userGotCoupon.length}}'>
+               <view class='hadGet'>已领完</view>
+              </block>
+              <block wx:elif='{{!!cou.userGotCoupon.length}}'>
+                <view class='hadGet'>已领取</view>
+              </block>
+              <block wx:else>
+                <view class='notGet' style='background:{{setting.platformSetting.defaultColor}}' data-id='{{cou.id}}' bindtap='GotCoupon'>领取优惠券</view>
+              </block>
+            </view>
+          </view>
+          <view class='itemBottom'>{{cou.startDate}} 至 {{cou.endDate}}</view>
+      </view>
+    </view>
+
+    <view class='noList' wx:else>
+      <text>主人~暂时还没有任何可领取的优惠券哦！</text>
+    </view>
+    
+</view>

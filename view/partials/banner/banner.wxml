@@ -1,0 +1,13 @@
+<!-- swiper轮播图 -->
+<import src="firstBanner.wxml"/>  <!-- 正常的标题 -->
+
+   <block wx:if='{{data.androidTemplate == ""}}'>
+  <template is="firstBanner" 
+       data="{{...data,sysWidth,...setting}}"></template> 
+
+  </block> 
+
+
+<slot></slot>
+
+

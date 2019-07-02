@@ -1,0 +1,198 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.7.0",
+	"appid": "wxe6d9bd40c2575f5b",
+	"projectname": "maimai",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 4,
+			"list": [
+				{
+					"id": 0,
+					"name": "我的优惠券",
+					"pathName": "pages/coupon_detail/index",
+					"query": "couponId=81",
+					"scene": "1011"
+				},
+				{
+					"id": 1,
+					"name": "囤仔转发后进入",
+					"pathName": "pageTab/near_shop_page/index",
+					"query": "",
+					"scene": "1001"
+				},
+				{
+					"id": 2,
+					"name": "扫码进来携带MendianID",
+					"pathName": "pageTab/index/index",
+					"query": "sign=dfb57701a0596af2ee8228ce78310378&verifyScanType=2&VERIFICATION_CODE=20190107170319972801",
+					"scene": "1011"
+				},
+				{
+					"id": 3,
+					"name": "预览页面",
+					"pathName": "pages/form_detail/index",
+					"query": "customFormId=90",
+					"scene": "1001"
+				},
+				{
+					"id": 4,
+					"name": "服务员申请",
+					"pathName": "pageTab/yunjishi/applyMendian/index",
+					"query": "",
+					"scene": "1035",
+					"referrerInfo": {}
+				},
+				{
+					"id": 5,
+					"name": "会员中心",
+					"pathName": "pages/user_level/index",
+					"query": "",
+					"scene": "1011"
+				},
+				{
+					"id": 6,
+					"name": "技师详情页",
+					"pathName": "pageTab/yunjishi/servantDetail/index",
+					"query": "servantId=9",
+					"scene": "1011"
+				},
+				{
+					"id": 7,
+					"name": "进入服务商页面",
+					"pathName": "pageTab/index/index",
+					"query": "ENTER_SHOP=540",
+					"scene": "1011"
+				},
+				{
+					"id": 8,
+					"name": "转发产品进入",
+					"pathName": "pageTab/index/index",
+					"query": "promotionId=49&productName=卓立旗金银滴&id=8219&scene=MINI_PLATFORM_USER_ID_66259&SHARE_PRODUCT_DETAIL_PAGE=8219",
+					"scene": "1011"
+				},
+				{
+					"id": 9,
+					"name": "转发产品详情",
+					"pathName": "pageTab/index/index",
+					"query": "id=8040&addShopId=236&scene=MINI_PLATFORM_USER_ID_9860&SHARE_PRODUCT_DETAIL_PAGE=8040",
+					"scene": "1011"
+				},
+				{
+					"id": 7,
+					"name": "tuizai",
+					"pathName": "pageTab/index/index",
+					"query": "APPLY_SERVER_CHANNEL_CODE=LIN456"
+				},
+				{
+					"id": 8,
+					"name": "qq1",
+					"pathName": "pageTab/lanHu/preApplyMendian/index",
+					"query": "code=222",
+					"scene": "1011"
+				},
+				{
+					"id": 12,
+					"name": "转发特卖进入",
+					"pathName": "pageTab/index/index",
+					"query": "promotionId=690&SHARE_PROMOTION_PRODUCTS_PAGE=690&scene=MINI_PLATFORM_USER_ID_91902",
+					"scene": "1011"
+				},
+				{
+					"id": 13,
+					"name": "进入订餐",
+					"pathName": "pageTab/index/index",
+					"query": "ENTER_ORDER_MEAL_TABLEID=1&&ADDSHOPID=236",
+					"scene": "1011"
+				},
+				{
+					"id": 14,
+					"name": "携带桌子",
+					"pathName": "pageTab/index/index",
+					"query": "ENTER_ORDER_MEAL_TABLEID=1&ADDSHOPID=236",
+					"scene": "1011"
+				},
+				{
+					"id": -1,
+					"name": "转发产品进入",
+					"pathName": "pages/edit_order/index",
+					"query": "orderNo=11111",
+					"scene": "1011"
+				},
+				{
+					"id": 16,
+					"name": "进入表单列表",
+					"pathName": "pages/form_commit_list/index",
+					"query": "customFormId=11",
+					"scene": "1011"
+				},
+				{
+					"id": 17,
+					"name": "拼团转发",
+					"pathName": "pages/pintuan_invitation/index",
+					"query": "pintuanRecordId=226",
+					"scene": "1001"
+				},
+				{
+					"id": 18,
+					"name": "地图",
+					"pathName": "pages/location_products/index",
+					"query": ""
+				},
+				{
+					"id": 19,
+					"name": "表单",
+					"pathName": "pages/form_detail/index",
+					"query": "customFormId=22",
+					"scene": "1001"
+				},
+				{
+					"id": 20,
+					"name": "进入特卖页",
+					"pathName": "pages/promotion_products/index",
+					"query": "promotionId=411",
+					"scene": "1011"
+				},
+				{
+					"id": 21,
+					"name": "进入账户余额",
+					"pathName": "pages/tunzhu_account/index",
+					"query": "promotionId=411",
+					"scene": "1011"
+				},
+				{
+					"id": -1,
+					"name": "进入余额提现",
+					"pathName": "pages/tunzhu_tixian/index",
+					"query": "promotionId=411",
+					"scene": "1011"
+				}
+			]
+		}
+	}
+}

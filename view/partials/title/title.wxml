@@ -1,0 +1,29 @@
+<!-- swiper轮播图 -->
+<import src="product_search.wxml"/>  <!-- 搜索框 -->
+<import src="headline.wxml"/>  <!-- 正常的标题 -->
+<import src="pupu_product_search.wxml"/>  <!-- pupu搜索框 -->
+
+
+    <!-- 当 androidTemplate为空的时候去引入普通标题框  -->  
+  <block wx:if='{{data.androidTemplate == ""}}'>
+  <template is="pt_4_0" 
+       data="{{...data}}"></template> 
+  </block>
+
+  <!--当 androidTemplate不为空的时候去引入search框 -->
+  <block wx:if='{{data.androidTemplate == "product_search"}}'>
+      <template is="pt_4_search" 
+       data="{{...data}}"></template> 
+       <!-- template里面包含template的时候外部传的参数需要去掉最外面的文件夹 -->
+   
+  </block>
+  <!--当 androidTemplate不为空的时候去引入search框 -->
+  <block wx:if='{{data.androidTemplate == "pupu_product_search"}}'>
+      <template is="pupu_product_search" 
+       data="{{...data,setting}}"></template> 
+       <!-- template里面包含template的时候外部传的参数需要去掉最外面的文件夹 -->
+   
+  </block>
+
+  <!-- <view>{{data.id}}</view> -->
+<slot></slot>

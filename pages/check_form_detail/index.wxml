@@ -1,0 +1,1 @@
+<check-form-detail id="checkFormDetail" showBtn="true" formCommitId="{{formCommitId}}" wx:if="{{formCommitId}}" bind:selectPsotion="selectPsotion"></check-form-detail>

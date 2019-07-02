@@ -1,0 +1,49 @@
+
+<!--积分商城  -->
+<view class='wrap'>
+  <!--头部的积分  -->
+  <view class='jiFen' style='background:{{defaultColor}}'>
+    <view class='box' bindtap='click'>
+      <view  class='userInfo'>
+        <image src='{{loginUser.userIcon}}' style='width:100rpx;height:100rpx;border-radius:100rpx'></image>
+        <text style='margin-left:10rpx;color:#fff;font-size:28rpx'>{{loginUser.nickName}}</text>
+      </view>
+      <view class='jiFenInfo'>
+        <!-- <view class='jiFenBox'><text style='font-size:28rpx'>当前积分:</text></view> -->
+        <view class='jiFenBox'><text style='font-size:28rpx'>查看积分</text></view>
+        <view class='jiFenImg' ><image src='../../images/icons/right1.png'></image></view> 
+      </view>
+    </view>
+  </view>
+
+  <!--中间的礼品 -->
+   <block  wx:if="{{jiFenGoods.length!=0}}">
+  
+    <view class='detail_list_mode1' style='background:  #eeeeee;'>
+      <view class="mode1_items" data-info="{{jiFenGoods}}" bindtap='tolinkUrl' wx:for="{{jiFenGoods}}" wx:for-item="jiFenGoods" wx:key="{{index}}" 
+        style='border-right: 10px solid #eeeeee;'> 
+        
+        <image  mode='aspectFill'  src="{{jiFenGoods.icon}}"></image>
+        <view class='center' style='width:{{(1/jsonData.column)*sysWidth-40}}px;'>{{jiFenGoods.name}}</view>
+        <!--价格和购物车图片  -->
+       <view class='NewBox'>
+         <text class='ml20'>{{jiFenGoods.needJifen}}积分</text>
+         <text class='mr20'>库存:{{jiFenGoods.count}}</text>
+       </view>
+       
+    <view class='exchange' style='background-color: {{defaultColor}};' catchtap='buyGoods' data-id='{{index}}'><text style='color:#fff;'>兑换</text></view>
+       
+ 
+      </view>
+    </view>
+</block>
+
+<block wx:if="{{jiFenGoods.length==0}}">
+            <view class="noproduct">
+              <image mode="widthFix" src='/images/icons/no-product.png'></image>
+              <text>没有相关商品</text>
+            </view>
+          </block>
+
+
+</view>

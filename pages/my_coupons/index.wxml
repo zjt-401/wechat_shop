@@ -1,0 +1,33 @@
+<view class='container'>
+    <view class='tocoupons_get' bindtap='gotoGet'
+    style='color:{{setting.platformSetting.defaultColor}}'>前往领券中心>></view>
+    <view class='tab'>
+      <view wx:for='{{List.tab}}' class='{{showTabIndex == index ? "active":"noneUse"}}' wx:key='tab_{{index}}' data-id='{{index}}' bindtap='bindTab'>{{item.title}}</view>
+    </view>
+    <view class='Tab_page'>
+        <block  wx:for='{{List.listData}}' wx:for-item='list' wx:for-index='m'  wx:key='list_{{m}}'>
+          <scroll-view  hidden='{{!(showTabIndex == m)}}' style='height: {{sysHeight-80}}px;' class='tab_page_list' scroll-y upper-threshold='-30' lower-threshold='10'  bindscrolltoupper='scrollTopToReflesh' bindscrolltolower='scrollBottomToLoadMore'>
+            <view class='tab_page_list_container' wx:if="{{list&&list.length!=0}}">
+                <view class='couponListItem' style='width: {{sysWidth*0.9}}px' wx:for='{{list}}' wx:for-item='cou' wx:for-index='n' wx:key='{{item.id}}'>
+
+                  <view class='itemHead' style='background:{{setting.platformSetting.defaultColor}}'>{{cou.couponName}}</view>
+                  <view class='itemBody'>
+                    <text style='color:{{setting.platformSetting.defaultColor}}'>{{cou.coupon.youhuiAmount}}</text>
+                    <view>
+                      <view class='ccc'>满{{cou.coupon.orderAmount}}可用</view>
+                      <view>{{cou.state}}</view>
+                      <view bindtap='toIndex'>点击前往使用优惠券</view>
+                    </view>
+                  </view>
+                  <view class='itemBottom'>{{cou.couponStartDate}} 至 {{cou.couponEndDate}}</view>
+                </view>
+            </view>
+            <view class='noList' wx:else>
+              <text wx:if="{{showTabIndex==0}}">主人~现在暂时还没有可使用的优惠券哦~!</text>
+              <text wx:if="{{showTabIndex==1}}">主人~现在暂时还没有已使用的优惠券哦~!</text>
+              <text wx:if="{{showTabIndex==2}}">主人~现在暂时还没有已过期的优惠券哦~!</text>
+            </view>
+          </scroll-view>
+        </block>
+    </view>
+</view>

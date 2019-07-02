@@ -1,0 +1,25 @@
+{
+
+"usingComponents": {
+  "component-tag-customPage": "../../view/partials/custom_page/index",
+  "component-tag-name": "../../view/partials/title/title",
+  "component-tag-nameBanner": "../../view/partials/banner/banner",
+  "component-tag-nameImageLink": "../../view/partials/image_link/image_link",
+  "component-tag-nameGridList": "../../view/partials/gridlist/gridlist",
+  "component-tag-nameHelpBlank": "../../view/partials/help_blank/help_blank",
+  "component-tag-nameTextLink": "../../view/partials/text_link/text_link",
+  "component-tag-namedetailList": "../../view/partials/detailList/detailList",
+  "component-tag-nameProductList": "../../view/partials/productList/productList",
+  "component-tag-nameVideo": "../../view/partials/video/video",
+  "component-tag-nameAudio": "../../view/partials/audio/audio",
+  "component-tag-nameNearShop": "../../view/partials/nearShop/nearShop",
+  "component-tag-nameNewsList": "../../view/partials/newsList/newsList",
+  "component-tag-nameCoupons": "../../view/partials/coupons/coupons",
+  "component-tag-nameActivitiesGoods": "../../view/partials/activitiesGoods/activitiesGoods",
+  "component-tag-nameActivitiesList": "../../view/partials/activitiesList/activitiesList",
+  "component-tag-nameRichText": "../../view/partials/richText/richText",
+  "component-tag-nameStores": "../../view/partials/stores/stores",
+  "component-tag-nametab": "../../view/partials/tab/index"
+}
+
+}
