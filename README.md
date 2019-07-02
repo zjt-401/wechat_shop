@@ -6,8 +6,7 @@
 	1.此项目是一套完整的电商系统，并且兼容各种电商场景可以很好的运用在各个领域。
 	2.包含页面数43页，组件数14
 	3.开源前端代码供大家学习，并且有许多漂亮的页面模板。
-	
-### QQ交流群 — 25013930
+
 ### 公司官网 - http://www.fz33.net  官网
 ### 管理后台效果图（部分图）
 
@@ -41,7 +40,7 @@
     14.haixianpifa
     15.其他自定义...
     -Tip 打开 app.js 文件，找到 clientNo 可换成任意以下的字段，即可切换项目
-    
+
 #### 功能介绍
 
 	1. 5种订单列表页面，并且可配置多种展示模型
@@ -66,13 +65,13 @@
 	新闻页 : news_list  news_detail
 	版权说明 : custom_page_copyright
 	我的 : custom_page_userinfo
-
+	
 	列表页 : search_product
 	三级列表 : search_product2
 	列表页2 : product_tree_list
 	列表页3 : product_waimai 
 	二级列表 : product_type2
-
+	
 	订单列表 : order_list.html?easyStatus=0
 	订单详细 : order_detail
 	编辑订单 : edit_order
